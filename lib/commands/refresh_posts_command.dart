@@ -3,7 +3,7 @@ import 'base_command.dart';
 class RefreshPostsCommand extends BaseCommand {
 
   Future<List<String>> run(String user) async {
-    // Make service call and inject rersults into the model
+    // Make service call and inject results into the model
     List<String> posts = await userService.getPosts(user);
     userModel.userPosts = posts;
 
