@@ -18,7 +18,7 @@ class _HomePageState extends State<HomePage> {
     setState(() => _isLoading = true);
     // Run command
     await RefreshPostsCommand().run(context.read<AppModel>().currentUser);
-    // Re-enbable refresh btn when command is done
+    // Re-enable refresh btn when command is done
     setState(() => _isLoading = false);
   }
 
